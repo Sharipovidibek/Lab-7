@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+    void task (int num) {
+        if (num==1){
+            cout<<"задача №1\n";
+    int b, kb;
+    cout<<"Ввести b";
+    cin>>b;
+    cout<<"количество килобайтов="<<(double) b/1024<<endl;
+        }
+        if (num==2){
+            cout<<"задача №2\n";
+    int A, B;
+    cout<<"Ввести A и В ";
+    cin>>A>>B;
+    cout<<"каличество отрезков="<<A/B<<endl;
+        }
+        if (num==3){
+            cout<<"задача №3\n";
+    int A, B;
+    cout<<"Ввести А и В";
+    cin>>A>>B;
+    cout<<"части отрезка="<<A%B;
+    } 
+    if (num==4){
+        cout<<"задача №4\n";
+    int AB;
+    cout<<"Ввести AB и нажмите enter";
+    cin>>AB;
+    cout<<"исходново число="<<AB/10+AB%10*10<<endl;
+    }
+    if (num==5){
+        cout<<"Задача №5\n";
+    int ABC;
+    cout<<"Ввести АВС и нажмите enter";
+    cin>>ABC;
+    cout<<"получение число="<<(ABC%100/10*100)+(ABC%10*10+ABC/100)<<endl;
+    }
+    }
+    
+    int main() {
+	setlocale(LC_ALL, "");
+	cout << "Номер задания: ";
+	int num;
+	cin >> num;
+	task(num);
+	cout << "Если хотите решить другое задание, напишите 1, иначе - 0 и нажмите Enter: ";
+	int otvet;
+	cin >> otvet;
+	if (otvet == 1)
+		main();
+    return 0;
+}
