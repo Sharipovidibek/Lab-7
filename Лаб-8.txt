@@ -1,0 +1,54 @@
+﻿#include <iostream>
+
+using namespace std;
+void task (int num) {
+if (num==1){
+cout<<"задача №1\n";
+int b, kb;
+cout<<"Ввести b";
+cin>>b;
+cout<<"каличество килобайтов="<<(double) b/1024<<endl;
+}
+if (num==2){
+cout<<"задача №2\n";
+int A, B;
+cout<<"Ввести число А и В ";
+cin>>A>>B;
+cout<<"Каличество отрезков="<<A/B<<endl;
+}
+if (num==3){
+cout<<"Задача №3\n";
+int A, B;
+cout<<"Ввести А и В";
+cin>>A>>B;
+cout<<"Найти дилину="<<A%B;
+}
+if (num==4){
+cout<<"Задача №4\n";
+int AB;
+cout<<"Ввести АВ кагда нажимаем enter";
+cin>>AB;
+cout<<"Исходного число="<<AB/10+AB%10*10<<endl;
+}
+if (num==5){
+cout<<"Задача №5\n";
+int ABC;
+cout<<"Ввести АВС кагда нажимаем enter";
+cin>>ABC;
+cout<<"ïîëó÷åíèå ÷èñëî="<<(ABC%100/10*100)+(ABC%10*10+ABC/100)<<endl;
+}
+}
+
+int main() {
+setlocale(LC_ALL, "");
+cout << "Номер задания: ";
+int num;
+cin >> num;
+task(num);
+cout << "Если хатите решить другое задание,напишити 1, иначе - 0 и нажмите enter: ";
+int otvet;
+cin >> otvet;
+if (otvet == 1)
+main();
+return 0;
+}
