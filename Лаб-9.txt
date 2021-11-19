@@ -1,0 +1,33 @@
+﻿#include <iostream>
+
+int main()
+{
+using namespace std;
+//первое Задача
+int n, k;
+cin >> n;
+cout << n % 60 << endl;
+
+
+//Второе задача
+cin >> k;
+cout << k % 7 << endl;
+
+
+//Третое задача
+cin >> k >> n;
+cout << ((k + n - 2) % 7) + 1 << endl;
+
+
+//Четвертое задача
+int a, b, c;
+cin >> a >> b >> c;
+cout << (a * b) / (c * c) << endl;
+
+
+//Пятая задача
+cin >> n;
+cout << (n - 1) / 100 + 1 << endl;;
+return 0;
+}
+
