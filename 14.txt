@@ -1,0 +1,50 @@
+﻿def task_1():
+    a, b = map(int, input().split())
+    for i in range(a, b + 1):
+        print(str(i) * i)
+
+
+def task_2():
+    a, b = map(int, input().split())
+    while a >= 0:
+        a -= b
+    print(a + b)
+
+
+def task_3():
+    n = int(input())
+    s, k = 0, 0
+    while s <= n:
+        k += 1
+        s += k
+    print(f"k = {k}, s = {s}")
+
+
+def task_4():
+    s = 1000
+    p = (1 + float(input()) / 100)
+    month = 0
+    while s <= 1100:
+        s *= p
+        month += 1
+    print(f"Количество месяцев: {month}\nИтоговый размер вклада: {s}")
+
+
+def task_5():
+    a, b = map(int, input().split())
+    while b != 0:
+        a, b = b, a % b
+    print(a)
+
+
+def task_6():
+    n = int(input())
+    if n == 0:
+        print(0)
+    else:
+        fib = [0, 1]
+        i = 2
+        while n not in fib:
+            fib.append(fib[i - 2] + fib[i - 1])
+            i += 1
+        print(i - 1)
