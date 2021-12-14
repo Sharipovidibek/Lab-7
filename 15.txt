@@ -1,0 +1,56 @@
+﻿# Первое задание
+def PowerA3(a: float, b=None):
+    b = a ** 3
+    return b
+
+
+for _ in range(5):
+    print(PowerA3(float(input())))
+
+
+# Второе задание
+def Sign(x: float):
+    if x < 0:
+        return -1
+    elif x == 0:
+        return 0
+    return 1
+
+
+[print(Sign(a) + Sign(b)) for a, b in [map(float, input().split())]]
+
+
+# Третье задание
+def RingS(r1: float, r2: float):
+    return 3.14 * (r1 - r2) ** 2
+
+
+for _ in range(3):
+    [print(RingS(r1, r2)) for r1, r2 in [map(float, input().split())]]
+
+
+# Четвертое задание
+def Quarter(x: float, y: float):
+    if y > 0:
+        if x > 0:
+            return "Первая четверть"
+        elif x < 0:
+            return "Вторая четверть"
+    elif y < 0:
+        if x < 0:
+            return "Третья четверть"
+        else:
+            return "Четвертая четверть"
+
+
+for _ in range(3):
+    [print(Quarter(x, y)) for x, y in [map(float, input().split())]]
+
+
+# Пятое задание
+def Fact2(n: int):
+    res = 1
+    while n > 0:
+        res *= n
+        n -= 2
+    return res
