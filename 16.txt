@@ -1,0 +1,26 @@
+def task_1():
+    print(list(range(1, int(input()) * 2)))
+
+
+def task_2():
+    for n, a, d in [map(int, input().split())]:
+        print([a * d ** i for i in range(n)])
+
+
+def task_3():
+    n, a, b = map(int, input().split())
+    arr = [a, b] + [0] * (n - 2)
+    for i in range(2, len(arr)):
+        arr[i] = sum(arr)
+    print(arr)
+
+
+def task_4():
+    n = int(input())
+    a = [int(input()) for _ in range(n)]
+    if n % 2 == 0:
+        for i in range(n // 2):
+            print(a[i], a[-i - 1])
+    else:
+        for i in range(n // 2 + 1):
+            print(a[i], a[-i])
