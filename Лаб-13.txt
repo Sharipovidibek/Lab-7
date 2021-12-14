@@ -1,0 +1,38 @@
+﻿def task_1():
+    price = float(input())
+    for i in [i / 10 for i in range(1, 11)]:
+        print(f"{i} кг --- {price * i} р.")
+
+
+def task_2():
+    p = 1
+    for i in range(1, int(input()) + 1):
+        p *= (1 + 0.1 * i)
+    print(p)
+
+
+def task_3():
+    n = int(input())
+    res, i = 0, 1
+    while i <= (2 * n - 1):
+        res += i
+        print(res)
+        i += 2
+
+
+def task_4():
+    a, n = float(input()), int(input())
+    s, i = 1, 1
+    while i <= n:
+        s += a ** i
+        i += 1
+    print(s)
+
+
+def task_5():
+    a, n = float(input()), int(input())
+    s, i = 1, 1
+    while i <= n:
+        s += (-a) ** i
+        i += 1
+    print(s)
